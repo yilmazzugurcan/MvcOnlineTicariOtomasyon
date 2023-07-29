@@ -124,9 +124,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Class\Admin.cs" />
     <Compile Include="Models\Class\Cariler.cs" />
+    <Compile Include="Models\Class\Departman.cs" />
+    <Compile Include="Models\Class\Fatura.cs" />
+    <Compile Include="Models\Class\FaturaKalem.cs" />
+    <Compile Include="Models\Class\Gider.cs" />
     <Compile Include="Models\Class\Kategori.cs" />
     <Compile Include="Models\Class\Personel.cs" />
+    <Compile Include="Models\Class\SatisHareket.cs" />
     <Compile Include="Models\Class\Urun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

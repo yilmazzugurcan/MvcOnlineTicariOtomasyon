@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,17 +7,18 @@ using System.Web;
 
 namespace MvcOnlineTicariOtomasyon.Models.Class
 {
-    public class Kategori
+    public class Departman
     {
         [Key]
-        public string KategoriID { get; set; }
-
+        public int Departmanid { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
-        public string KategoriAd { get; set; }
+        public string Departmanad { get; set; }
 
-        //her kategori içerisinde birden fazla ürün vardır
-        //ICollection ilişkili tablolarda tercih edilir.
-        public ICollection<Urun>  Uruns { get; set; }
+        //1 departman birden fazla personel bulunabilir. bu yüzden icollection kullanılır.
+
+        public ICollection<Personel> Personels { get; set; }
+
+
     }
 }
