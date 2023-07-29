@@ -11,7 +11,7 @@ namespace MvcOnlineTicariOtomasyon.Models.Class
     public class Kategori
     {
         [Key]
-        public string KategoriID { get; set; }
+        public int KategoriID { get; set; }
 
         [Column(TypeName = "Varchar")]
         [StringLength(30)]

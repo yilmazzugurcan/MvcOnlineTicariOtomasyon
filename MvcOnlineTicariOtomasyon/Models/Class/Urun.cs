@@ -33,7 +33,7 @@ namespace MvcOnlineTicariOtomasyon.Models.Class
         //bir ürünün sadece bir kategorisi olabilir.
         public Kategori Kategori { get; set; }
 
-        public SatisHareket SatisHareket { get; set; }
+        public ICollection<SatisHareket> SatisHarekets { get; set; }
 
     }
 }
