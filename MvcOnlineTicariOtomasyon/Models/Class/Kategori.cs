@@ -15,7 +15,7 @@ namespace MvcOnlineTicariOtomasyon.Models.Class
 
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
-        public string KategoriAd { get; set; }
+        public virtual string KategoriAd { get; set; }
 
         //her kategori içerisinde birden fazla ürün vardır
         //ICollection ilişkili tablolarda tercih edilir.
