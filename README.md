@@ -7,3 +7,7 @@ Readme sürekli güncellenecektir.
 19/07/23 4 adet yeni sınıf eklendi.
 
 29/07/23 Tüm sınıflar eklendi ve sınıflar arası ilişkiler kuruldu.
+
+11/08/23 Kategori ekleme,güncelleme,silme eklendi.
+
+20/08/23 Ürün ekleme,silme, güncelleme eklendi.
