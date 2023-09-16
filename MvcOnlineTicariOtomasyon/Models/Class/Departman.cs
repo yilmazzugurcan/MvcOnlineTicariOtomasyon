@@ -16,7 +16,7 @@ namespace MvcOnlineTicariOtomasyon.Models.Class
         public string Departmanad { get; set; }
 
         //1 departman birden fazla personel bulunabilir. bu yüzden icollection kullanılır.
-
+        public bool Durum { get; set; }
         public ICollection<Personel> Personels { get; set; }
 
 
