@@ -11,3 +11,5 @@ Readme sürekli güncellenecektir.
 11/08/23 Kategori ekleme,güncelleme,silme eklendi.
 
 20/08/23 Ürün ekleme,silme, güncelleme eklendi.
+
+16/09/23 Departman ekleme,silme,güncelleme ve personel satışlarını listeleme eklendi.
