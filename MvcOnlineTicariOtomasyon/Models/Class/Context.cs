@@ -24,4 +24,5 @@ namespace MvcOnlineTicariOtomasyon.Models.Class
         public DbSet<Urun> Uruns { get; set; }
 
     }
+   
 }

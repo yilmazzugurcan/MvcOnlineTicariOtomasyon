@@ -27,7 +27,7 @@ namespace MvcOnlineTicariOtomasyon.Models.Class
         [StringLength(60)]
 
         public string VergiDairesi { get; set; }
-        public DateTime Saat { get; set; }
+        public string Saat { get; set; }
 
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
@@ -39,6 +39,6 @@ namespace MvcOnlineTicariOtomasyon.Models.Class
 
 
         //fatura ve faturakalem ilişkisi
-        public ICollection<FaturaKalem> FaturaKalems { get; set; }
+        public virtual ICollection<FaturaKalem> FaturaKalems { get; set; }
     }
 }
