@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<table class="table table-bordered" style="margin-top:20px;margin-left:20px;margin-right:20px">
+<table class="table table-bordered" style="margin-top:20px;margin-left:20px">
     <tr>
         <th>ID</th>
         <th>Seri No</th>
@@ -13,10 +13,9 @@
         <th>Vergi Dairesi</th>
         <th>Tarih</th>
         <th>Saat</th>
-        
+        <th>Toplam</th>
         <th>Teslim Eden</th>
         <th>Teslim Alan</th>
-        
         <th>Güncelle</th>
         <th>Detay</th>
     </tr>
@@ -34,8 +33,6 @@
             <td>
                 @k.FaturaSiraNo
             </td>
-
-
             <td>
                 @k.VergiDairesi
             </td>
@@ -45,15 +42,16 @@
             <td>
                 @k.Saat
             </td>
-
-
-
+            <td>
+                @k.Toplam
+            </td>
             <td>
                 @k.TeslimEden
             </td>
             <td>
                 @k.TeslimAlan
             </td>
+
 
 
             <td><a href="/Fatura/FaturaGetir/@k.Faturaid" class="btn btn-warning">Güncelle</a></td>

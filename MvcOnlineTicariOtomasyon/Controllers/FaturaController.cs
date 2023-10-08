@@ -55,7 +55,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             ftr.Tarih = f.Tarih;
             ftr.TeslimAlan = f.TeslimAlan;
             ftr.TeslimEden = f.TeslimEden;
-            //ftr.Toplam = f.Toplam;
+            ftr.Toplam = f.Toplam;
             ftr.Saat = f.Saat;
             ftr.TeslimEden = f.TeslimEden;
             ftr.TeslimAlan = f.TeslimAlan;
@@ -69,6 +69,73 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var degerler = c.FaturaKalems.Where(x => x.FaturaKalemid == id).ToList();
             return View(degerler);
         }
+
+        [HttpGet]
+        public ActionResult YeniKalem()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult YeniKalem(FaturaKalem f)
+        {
+            c.FaturaKalems.Add(f);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult KalemGuncelle(int id)
+        {
+            var deger = c.FaturaKalems.Find(id);
+            return View(deger);
+        }
+        [HttpPost]
+        public ActionResult KalemGuncelle(FaturaKalem f)
+        {
+            var deger = c.FaturaKalems.Find(f.FaturaKalemid);
+            deger.Aciklama = f.Aciklama;
+            deger.BirimFiyat = f.BirimFiyat;
+            deger.Faturaid = f.Faturaid;
+            deger.Miktar = f.Miktar;
+            deger.Tutar = f.Tutar;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+            public ActionResult KalemSil(int id)
+        {
+            var deger = c.FaturaKalems.Find(id);
+            c.FaturaKalems.Remove(deger);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public ActionResult DinamikEkle(FaturaKalem f)
+        {
+            c.FaturaKalems.Add(f);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public ActionResult DinamikSil(int id)
+        {
+            var deger = c.FaturaKalems.Find(id);
+            c.FaturaKalems.Remove(deger);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public ActionResult DinamikGuncelle(FaturaKalem f)
+        {
+            var deger = c.FaturaKalems.Find(f.FaturaKalemid);
+            deger.Aciklama = f.Aciklama;
+            deger.BirimFiyat = f.BirimFiyat;
+            deger.Faturaid = f.Faturaid;
+            deger.Miktar = f.Miktar;
+            deger.Tutar = f.Tutar;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
 
     }
 }

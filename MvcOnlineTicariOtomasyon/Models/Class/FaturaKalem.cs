@@ -18,8 +18,13 @@ namespace MvcOnlineTicariOtomasyon.Models.Class
         public decimal  BirimFiyat { get; set; }
         public decimal  Tutar { get; set; }
 
+       
+        public int Faturaid { get; set; }
+
+
         //1 faturakaleminin sadece bir faturası olabilir
-        public Fatura Fatura { get; set; }
+        public virtual Fatura Fatura { get; set; }
+
 
     }
 }

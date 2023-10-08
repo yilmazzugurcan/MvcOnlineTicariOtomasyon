@@ -25,8 +25,11 @@ namespace MvcOnlineTicariOtomasyon.Models.Class
 
         [Column(TypeName = "Varchar")]
         [StringLength(60)]
-
         public string VergiDairesi { get; set; }
+
+
+        [Column(TypeName = "char")]
+        [StringLength(5)]
         public string Saat { get; set; }
 
         [Column(TypeName = "Varchar")]
@@ -36,6 +39,8 @@ namespace MvcOnlineTicariOtomasyon.Models.Class
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public string TeslimAlan { get; set; }
+
+        public decimal Toplam { get; set; }
 
 
         //fatura ve faturakalem ilişkisi
